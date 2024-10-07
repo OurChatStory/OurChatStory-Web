@@ -39,9 +39,9 @@ npm run dev
 ```
 ## Maintainers
 You can reach out to them on Twitter for any issues or suggestions
-- Anshul Agarwala - [@anshulagx](https://twitter.com/anshulagx)
+- Anshul Agrawal - [@anshulagx](https://twitter.com/anshulagx)
 - Yajat Malhotra  - [@iamyajat](https://twitter.com/iamyajat)
-- Divit Agarwala - [@divit_agrawal_](https://twitter.com/Divit_Agrawal_)
+- Divit Agrawal - [@divit_agrawal_](https://twitter.com/Divit_Agrawal_)
 ## Contributing
 
 Pull requests are welcome for both bug fixes and features. For major changes, please open an issue first
