@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
           <meta name="author" content="Yajat Malhotra &amp; Anshul Agarwala" />
           <meta
             name="keywords"
-            content="WhatsApp, Wrapped, WhatsAppWrapped, #WhatsAppWrapped, Ourchatstory, our, chat, story, spotify, reddit, recap, 2023"
+            content="WhatsApp, Wrapped, WhatsAppWrapped, #WhatsAppWrapped, Ourchatstory, our, chat, story, spotify, reddit, recap, 2024"
           />
 
           <meta property="og:url" content="https://OurChatStory.co/" />

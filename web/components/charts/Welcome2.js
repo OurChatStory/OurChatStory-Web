@@ -86,7 +86,7 @@ const Card6 = ({ drawData }) => {
             "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
         }}
       >
-        in 2023
+        in 2024
       </Text>
     </VStack>
   );

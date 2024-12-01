@@ -6,7 +6,7 @@ module.exports.sample = {
   ],
   "total_no_of_chats": 2288,
   "total_days_talked": 96,
-  "most_active_date": "2023-01-07",
+  "most_active_date": "2024-01-07",
   "no_of_messages_per_member": [
     {
       "member": "Ananya",
@@ -207,13 +207,13 @@ module.exports.sample = {
   "top_percent": 0.9497740404600016,
   "longest_gap": {
     "length": 33,
-    "start_date": "2023-05-19",
-    "end_date": "2023-06-21"
+    "start_date": "2024-05-19",
+    "end_date": "2024-06-21"
   },
   "longest_session": {
     "total_time": 1680,
-    "start_time": "2023-01-07T14:32:00",
-    "end_time": "2023-01-07T15:00:00",
+    "start_time": "2024-01-07T14:32:00",
+    "end_time": "2024-01-07T15:00:00",
     "total_messages": 195,
     "avg_reply_time": 8.615384
   },

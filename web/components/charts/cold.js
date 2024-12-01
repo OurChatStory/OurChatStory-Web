@@ -148,7 +148,7 @@ const Card6 = ({ drawData }) => {
               fontWeight={300}
               textAlign="center"
             >
-              There was <strong>not a single day</strong> in 2023 when
+              There was <strong>not a single day</strong> in 2024 when
               y&apos;all didn&apos;t talk to each other.
             </Text>
             {drawData.group ? (
