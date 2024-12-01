@@ -1,0 +1,18 @@
+def log_metadata(stats: dict):
+    """Log metadata about the current request."""
+    print()
+    print("---------------------------------------")
+    print("Chats of " + ', '.join(stats["members"]))
+    print("---------------------------------------")
+    print("Total Chats\t\t: " + str(stats["total_no_of_chats"]))
+    print("Total Days Talked\t: " + str(stats["total_days_talked"]))
+    print("Who Texts First\t: " + str(stats["who_texts_first"]))
+    print("Most Active Date\t: " + str(stats["most_active_date"]))
+    print("Most Active Member\t: " + str(stats["most_active_member"]["member"]))
+    print("Most Active Month\t: " + str(stats["most_active_month"]["month"]))
+    print("Most Active Day\t: " + str(stats["most_active_day"]["day"]))
+    print("Most Active Hour\t: " + str(stats["most_active_hour"]["hour"]))
+    print("Longest Gap\t\t: " + str(stats["longest_gap"]["length"]))
+    print("Longest Session\t: " + str(stats["longest_session"]["total_time"]))
+    print("Avg Reply Time\t: " + str(stats["longest_session"]["avg_reply_time"]))
+    print()
