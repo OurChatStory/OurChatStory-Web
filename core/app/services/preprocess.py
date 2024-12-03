@@ -18,7 +18,7 @@ def chat_extractor(chat: str, phone: str) -> str:
         y = chat.find("] ") + 2
     else:
         y = chat.find(" - ") + 3
-    return chat[y:]
+    return chat[y:].replace("<This message was edited>", "")
 
 
 def person_extractor(chat: str) -> str:
