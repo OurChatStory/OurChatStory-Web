@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODE = os.getenv("MODE") or "prod"
-YEAR = int(os.getenv("YEAR")) or 2024
+YEAR = int(os.getenv("WRAPPED_YEAR")) or 2025
 ALLOWED_FILE_TYPES = ["txt", "TXT", "zip", "ZIP"]
 REGEX = {
     "IOS": "^[{1}[0-9]+[\/|\–|\-|\.][0-9]+[\/|\–|\-|\.][0-9]+,?\s[0-9]+[:|.][0-9]+[:|.][0-9]+.*$",

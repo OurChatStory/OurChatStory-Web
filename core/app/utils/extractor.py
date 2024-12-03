@@ -6,7 +6,10 @@ import io
 async def extract_zip(file: UploadFile = File(...)):
     contents = await file.read()
     zip_file = ZipFile(io.BytesIO(contents))
-    return zip_file.read("_chat.txt").decode("utf-8")
+    for file_name in zip_file.namelist():
+        if file_name.endswith(".txt"):
+            return zip_file.read(file_name).decode("utf-8")
+    return None
 
 
 async def decode_csv(file: UploadFile = File(...)):

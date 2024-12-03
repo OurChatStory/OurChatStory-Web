@@ -6,7 +6,7 @@ from app.utils.constants import (
     MIN_MEMBERS_REQUIRED,
     YEAR,
 )
-from app.utils.logging import log_metadata
+from app.utils.logger import log_metadata
 
 
 def get_wrap(chats: str) -> dict:
