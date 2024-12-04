@@ -8,6 +8,10 @@ import re
 from app.utils.zscore import zscore
 from app.utils.time import check_dayfirst, parse_datetime
 
+months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+]
 
 class WhatsAppChat:
     def __init__(self, chats: str, year: int = None):
@@ -90,21 +94,6 @@ class WhatsAppChat:
 
     def get_no_of_messages_per_month(self) -> tuple:
         m_count = self.df["month"].value_counts().to_dict()
-        months = [
-            "Jan",
-            "Feb",
-            "Mar",
-            "Apr",
-            "May",
-            "Jun",
-            "Jul",
-            "Aug",
-            "Sep",
-            "Oct",
-            "Nov",
-            "Dec",
-        ]
-
         month_count = [{"month": x, "count": 0} for x in months]
 
         for mc in m_count:
@@ -216,3 +205,23 @@ class WhatsAppChat:
 
     def get_wordcloud(self):
         return word_cloud_to_base64(self.df)
+    
+    def get_call_stats(self):
+        call_pattern = re.compile(r"(Video call|Voice call), (\d+ (min|hr))")
+        calls = self.df[self.df["message"].str.contains(call_pattern)]
+        call_info = calls["message"].str.extract(call_pattern)
+        call_info.columns = ["call_type", "duration", "unit"]
+        call_info["duration"] = call_info.apply(
+            lambda row: int(row["duration"].split()[0]) * (60 if row["unit"] == "hr" else 1), axis=1
+        )
+        call_info["month"] = calls["time"].dt.month
+        total_minutes_per_month = call_info.groupby("month")["duration"].sum().to_dict()
+        
+        month_wise_minutes = [{"month": months[i-1], "duration": total_minutes_per_month.get(i, 0)} for i in range(1, 13)]
+        total_minutes = sum(total_minutes_per_month.values())
+        
+        most_minutes_month = max(total_minutes_per_month, key=total_minutes_per_month.get, default=None)
+        most_minutes_month = {"month": months[most_minutes_month-1], "minutes": total_minutes_per_month[most_minutes_month]} if most_minutes_month else {}
+
+        return {"total_minutes": total_minutes, "month_wise_minutes": month_wise_minutes, "most_minutes_month": most_minutes_month}
+

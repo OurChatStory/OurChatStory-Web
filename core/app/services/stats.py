@@ -53,6 +53,8 @@ def get_wrap(chats: str) -> dict:
 
     wordcloud = wc.get_wordcloud()
 
+    call_stats = wc.get_call_stats()
+
     stats = {
         "group": is_group,
         "members": chat_members,
@@ -73,6 +75,7 @@ def get_wrap(chats: str) -> dict:
         "top_percent": top_percent,
         "longest_gap": longest_gap,
         "longest_session": longest_session,
+        "call_stats": call_stats,
         "wordcloud": wordcloud,
     }
 
