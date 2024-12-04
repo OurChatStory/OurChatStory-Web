@@ -39,7 +39,7 @@ npm run dev
 ```
 ## Maintainers
 You can reach out to them on Twitter for any issues or suggestions
-- Anshul Agrawal - [@anshulagx](https://twitter.com/anshulagx)
+- Anshul Agarwal - [@anshulagx](https://twitter.com/anshulagx)
 - Yajat Malhotra  - [@iamyajat](https://twitter.com/iamyajat)
 - Divit Agrawal - [@divit_agrawal_](https://twitter.com/Divit_Agrawal_)
 ## Contributing
