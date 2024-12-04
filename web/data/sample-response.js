@@ -1,27 +1,27 @@
 module.exports.sample = {
   "group": false,
   "members": [
-    "Samuel",
-    "Ananya"
+    "Divya",
+    "James"
   ],
   "total_no_of_chats": 2288,
   "total_days_talked": 96,
   "most_active_date": "2024-01-07",
   "no_of_messages_per_member": [
     {
-      "member": "Ananya",
+      "member": "James",
       "count": 1194
     },
     {
-      "member": "Samuel",
+      "member": "Divya",
       "count": 1094
     }
   ],
   "most_active_member": {
-    "member": "Ananya",
+    "member": "James",
     "count": 1194
   },
-  "who_texts_first": "Samuel",
+  "who_texts_first": "Divya",
   "monthly_chats_count": [
     {
       "month": "Jan",
