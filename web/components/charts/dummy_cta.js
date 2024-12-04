@@ -7,14 +7,13 @@ import {
   Button,
   Link,
   IconButton,
-  Image
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
 import Marquee from "react-fast-marquee";
 import { FaInstagram, FaTwitter, FaRegCopy } from "react-icons/fa";
 import CountUp from "react-countup";
 import { useEffect, useState } from "react";
-
 
 const DummyCTA = ({ drawData, setShowUploader }) => {
   const UPI_ID = "ourchatstory@ybl";
@@ -48,8 +47,7 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
       p="1rem"
       // borderColor="#fcea2b"
       // errorBorderColor="red.300"
-      border="0px solid #fcea2b"
-    >
+      border="0px solid #fcea2b">
       <Spacer />
       <Text
         fontSize="3xl"
@@ -57,8 +55,7 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
         color="white"
         w={"100%"}
         fontWeight="600"
-        textAlign="center"
-      >
+        textAlign="center">
         Now to the best part!
       </Text>
       <Text
@@ -69,8 +66,7 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
         fontWeight="500"
         textAlign="center"
         pl={"1rem"}
-        pr={"1rem"}
-      >
+        pr={"1rem"}>
         You can know your WhatsApp Chat Story with your friends!
       </Text>
       {/* <Text color="#F5F5F5" fontSize="2xl" align="center">
@@ -113,8 +109,7 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
           setShowUploader(true);
           // Disable scroll
           document.body.style.overflow = "hidden";
-        }}
-      >
+        }}>
         {/* <label for="hid" cursor="pointer">
                       </label> */}
         <Text fontSize={{ base: "sm", sm: "sm", lg: "md" }} color="dark">
@@ -177,7 +172,7 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
       {/* <Link href="/privacy">
         <Text fontSize={"1x1"}>Privacy</Text>
       </Link> */}
-      <Text color="#F5F5F5" fontSize="s" align="center" pb={1}>
+      {/* <Text color="#F5F5F5" fontSize="s" align="center" pb={1}>
         Sponsor this project using UPI:
       </Text>
       <Box style={{ margin: "0px" }}>
@@ -204,8 +199,8 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
             </span>
           </div>
         </div>
-      </Box>
-      <Box minHeight={6} style={{margin: "0px"}}>
+      </Box> */}
+      <Box minHeight={6} style={{ margin: "0px" }}>
         {copiedTextTrue && (
           <Text
             color="#F5F5F5"
@@ -216,7 +211,7 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
           </Text>
         )}
       </Box>
-      <Text style={{margin: "0px"}}>or</Text>
+      {/* <Text style={{margin: "0px"}}>or</Text> */}
       <a
         href="https://www.buymeacoffee.com/whatsappwrapped"
         target="_blank"
@@ -254,8 +249,7 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
       <Text
         fontSize={{ base: "smaller", sm: "sm", lg: "smaller" }}
         color="grey"
-        pb="2rem"
-      >
+        pb="2rem">
         Read our{" "}
         <Link style={{ textDecoration: "underline" }} href="/privacy">
           privacy policy
@@ -269,8 +263,10 @@ const DummyCTA = ({ drawData, setShowUploader }) => {
           no one reads or stores your chats
         </strong>
         <br />
-        You can be confident by checking our {" "}
-        <Link style={{ textDecoration: "underline" }} href="https://github.com/OurChatStory/OurChatStory">
+        You can be confident by checking our{" "}
+        <Link
+          style={{ textDecoration: "underline" }}
+          href="https://github.com/OurChatStory/OurChatStory">
           code.
         </Link>
       </Text>

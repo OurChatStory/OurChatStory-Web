@@ -95,7 +95,7 @@ const Card6 = ({ drawData }) => {
         Help us keep the story going. A small donation keeps our servers running
         and your memories flowing!
       </Text>
-      <Text color="#F5F5F5" fontSize="s" align="center" pb={1}>
+      {/* <Text color="#F5F5F5" fontSize="s" align="center" pb={1}>
         Sponsor this project using UPI:
       </Text>
       <Box style={{ margin: "0px" }}>
@@ -133,8 +133,8 @@ const Card6 = ({ drawData }) => {
             Copied!
           </Text>
         )}
-      </Box>
-      <Text style={{margin: "0px"}}>or</Text>
+      </Box> */}
+      {/* <Text style={{margin: "0px"}}>or</Text> */}
       <a
         href="https://www.buymeacoffee.com/whatsappwrapped"
         target="_blank"
