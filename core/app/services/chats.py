@@ -209,6 +209,9 @@ class WhatsAppChat:
     def get_call_stats(self):
         call_pattern = re.compile(r"(Video call|Voice call), (\d+ (min|hr))")
         calls = self.df[self.df["message"].str.contains(call_pattern)]
+        if calls.empty:
+            month_wise_minutes = [{"month": month, "duration": 0} for month in months]
+            return {"total_minutes": 0, "month_wise_minutes": month_wise_minutes, "most_minutes_month": {"month": None, "minutes": 0}}
         call_info = calls["message"].str.extract(call_pattern)
         call_info.columns = ["call_type", "duration", "unit"]
         call_info["duration"] = call_info.apply(
